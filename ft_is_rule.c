@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ilstdel.c                                       :+:      :+:    :+:   */
+/*   is_rule.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 11:55:41 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 11:55:46 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/08/20 16:52:05 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/08/21 10:47:07 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_ilstdel(t_list **lst)
+int		ft_is_rule(char *av)
 {
-	t_list *temp;
-
-	while (*lst)
-	{
-		temp = *lst;
-		*lst = temp->next;
-		free(temp);
-	}
-}
-
-void	delete_all(char **arr, t_list **alst, t_list **b)
-{
-	ft_ilstdel(alst);
-	ft_ilstdel(b);
-	ft_arraydel(arr);
+	if (ft_strcmp(av, "sa") == 0 || ft_strcmp(av, "sb") == 0 ||
+			ft_strcmp(av, "ss") == 0 || ft_strcmp(av, "pa") == 0 ||
+			ft_strcmp(av, "pb") == 0 || ft_strcmp(av, "ra") == 0 ||
+			ft_strcmp(av, "rb") == 0 || ft_strcmp(av, "rr") == 0 ||
+			ft_strcmp(av, "rra") == 0 || ft_strcmp(av, "rrb") == 0 ||
+			ft_strcmp(av, "rrr") == 0)
+		return (1);
+	return (0);
 }

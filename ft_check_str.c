@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 12:19:58 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/20 17:10:06 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 10:52:44 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int				ft_check_str(char *str)
 {
-	if (!ft_strisnum(str))
+	if (!ft_isnum(str))
 	{
 		ft_putstr_fd("Error\n", 2);
 		return (0);

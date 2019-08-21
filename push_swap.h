@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 11:11:29 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/20 17:10:20 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 10:52:22 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ size_t				ft_ilstsize(t_list *list);
 int					ft_issorted(t_list *lst);
 int					ft_check_str(char *str);
 int					is_overflow(char *str);
-int					ft_strisnum(char *str);
+int					ft_isnum(char *str);
 void				ft_arraydel(char **arr);
 char				**get_rule(int i);
-int					is_rule(char *av);
-int					ft_checker(t_list **alst, t_list **b);
+int					ft_is_rule(char *av);
+int					ft_argv_checker(t_list **alst, t_list **b);
 int					check_param(char **l_a);
 void				delete_all(char **arr, t_list **alst, t_list **b);
 
