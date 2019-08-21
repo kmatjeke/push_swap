@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 12:53:20 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 10:52:16 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 15:16:13 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,22 +74,22 @@ int		is_overflow(char *str)
 int		param(char *str)
 {
 	int		i;
-	char	**l_a;
+	char	**lst;
 
-	l_a = ft_strsplit(str, ' ');
+	lst = ft_strsplit(str, ' ');
 	i = 0;
-	while (l_a[i])
+	while (lst[i])
 	{
-		if (!ft_check_str(l_a[i]))
+		if (!ft_check_str(lst[i]))
 			return (0);
-		if (find(l_a, l_a[i], i))
+		if (find(lst, lst[i], i))
 		{
 			ft_putstr_fd("Error\n", 2);
 			return (0);
 		}
 		i++;
 	}
-	ft_arraydel(l_a);
+	ft_arraydel(lst);
 	return (1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 11:08:39 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 11:36:56 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 14:38:03 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,59 @@ static void	ft_sort_three(t_list **list)
 		ft_rra(list);
 }
 
-static void	ft_sort_four
+static void	ft_sort_four(t_list **list, t_list **b)
+{
+	int	min;
+	int	pos;
+
+	if (ft_issorted(*list) || !*list)
+		return ;
+	min = min_value(*list);
+	pos = min_pos(*list, min);
+	if (pos <= (int)ft_ilstsize(*list) / 2)
+		while ((*list)->data != min)
+			ft_ra(list);
+	else
+		while ((*list)->data != min)
+			ft_rra(list);
+	ft_pb(list, b);
+	ft_sort_three(list);
+	ft_pa(list, b);
+}
+
+static void	ft_sort_five(t_list **list, t_list **b)
+{
+	int	min;
+	int	pos;
+
+	if (ft_issorted(*list) || !*list)
+		return ;
+	min = min_value(*list);
+	pos = min_pos(*list, min);
+	if (pos <= (int)ft_ilstsize(*list) / 2)
+		while ((*list)->data != min)
+			ft_ra(list);
+	else
+		while ((*list)->data != min)
+			ft_rra(list);
+	ft_pb(list, b);
+	ft_sort_four(list, b);
+	ft_pa(list, b);
+}
+
+void		ft_five_or_smaller(t_list **list, t_list **b)
+{
+	if (ft_issorted(*list) || !*list)
+		return ;
+	else
+	{
+		if (ft_ilstsize(*list) == 2)
+			ft_sa(list);
+		else if (ft_ilstsize(*list) == 3)
+			ft_sort_three(list);
+		else if (ft_ilstsize(*list) == 4)
+			ft_sort_four(list, b);
+		else if (ft_ilstsize(*list) == 5)
+			ft_sort_five(list, b);
+	}
+}

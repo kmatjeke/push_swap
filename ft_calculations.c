@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 12:06:42 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 12:28:58 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 12:40:57 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		min_value(t_list *list)
 	int		min;
 	t_list	*temp;
 
-	temp = lst;
+	temp = list;
 	min = temp->data;
 	while (temp)
 	{
@@ -37,9 +37,24 @@ int		max_value(t_list *list)
 	max = temp->data;
 	while (temp)
 	{
-		if (temp-data > max)
+		if (temp->data > max)
 			max = temp->data;
 		temp = temp->next;
 	}
 	return (max);
+}
+
+int		min_pos(t_list *list, int min)
+{
+	int		pos;
+	t_list	*temp;
+
+	pos = 0;
+	temp = list;
+	while (temp && temp->data != min)
+	{
+		temp = temp->next;
+		pos++;
+	}
+	return (pos);
 }

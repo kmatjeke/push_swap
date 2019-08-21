@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 11:11:29 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 12:29:03 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 14:48:52 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,8 @@ int					ft_argv_checker(t_list **alst, t_list **b);
 int					check_param(char **av);
 int					min_value(t_list *list);
 int					max_value(t_list *list);
+int					min_pos(t_list *list, int min);
+void				ft_five_or_smaller(t_list **list, t_list **b);
+void				ft_push_swap(t_list **list, t_list **b);
 
 #endif
