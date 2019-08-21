@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 14:38:15 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 15:20:25 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 15:53:34 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static void	finish(t_list **list, t_list **b)
 		return ;
 	}
 	ft_push_swap(list, b);
-	ft_ilstdel(list);
-	ft_ilstdel(b);
+	/*ft_ilstdel(list);
+	ft_ilstdel(b);*/
 }
 
 int			main(int argc, char **argv)
@@ -62,6 +62,7 @@ int			main(int argc, char **argv)
 			ft_arraydel(argv);
 		}
 		finish(&list, &b);
+		ft_printlist(list);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 11:11:29 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 14:48:52 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/08/21 15:43:28 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void				ft_arraydel(char **arr);
 void				delete_all(char **arr, t_list **alst, t_list **b);
 void				ft_display(t_list *a, t_list *b);
 void				ft_ilstdel(t_list **lst);
+void				ft_printlist(t_list *list);
 size_t				ft_ilstsize(t_list *list);
 int					ft_issorted(t_list *lst);
 int					ft_check_str(char *str);
