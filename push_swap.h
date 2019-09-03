@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 11:11:29 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/27 15:08:45 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 13:27:02 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int					min_value(t_list *list);
 int					max_value(t_list *list);
 int					min_pos(t_list *list, int min);
 void				ft_six_or_smaller(t_list **list, t_list **b);
+int					ft_median(t_ilist *list, int num, int loop);
 void				ft_push_swap(t_list **list, t_list **b);
 
 #endif

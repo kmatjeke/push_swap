@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 14:38:15 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/27 15:11:38 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 13:14:43 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int			main(int argc, char **argv)
 		}
 		finish(&list, &b);
 		ft_printlist(list);
+		ft_putchar('\n');
+		ft_printlist(b);
 	}
 	return (0);
 }
