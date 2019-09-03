@@ -6,17 +6,17 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 13:15:23 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 13:26:07 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 13:55:02 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int		*ft_stringlist(t_ilist *list)
+static int		*ft_stringlist(t_list *list)
 {
 	int		i;
 	int		*string;
-	t_ilist *temp;
+	t_list *temp;
 
 	i = 0;
 	temp = list;
@@ -30,7 +30,7 @@ static int		*ft_stringlist(t_ilist *list)
 	return (string);
 }
 
-static int		ft_mid(t_ilist *list, int *string, int num, int loop)
+static int		ft_mid(t_list *list, int *string, int num, int loop)
 {
 	int	i;
 
@@ -42,7 +42,7 @@ static int		ft_mid(t_ilist *list, int *string, int num, int loop)
 	return (i);
 }
 
-int				ft_median(t_ilist *list, int num, int loop)
+int				ft_median(t_list *list, int num, int loop)
 {
 	int	i;
 	int	*string;
