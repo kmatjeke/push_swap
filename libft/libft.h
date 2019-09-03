@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:39:03 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/20 16:27:44 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 13:30:33 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ size_t				ft_words(const char *str);
 int					get_next_line(const int fd, char **line);
 char				**ft_array_join(char **arr, char *str);
 void				ft_arraydel(char **arr);
+void				ft_swap(int *a, int *b);
 typedef struct		s_ilist
 {
 	void			*content;
