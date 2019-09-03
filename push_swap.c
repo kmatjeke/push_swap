@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 14:38:15 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 13:14:43 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 14:56:55 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ void		ft_push_swap(t_list **list, t_list **b)
 	{
 		if (len <= 6)
 			ft_six_or_smaller(list, b);
+		else if (len > 6 && len <= 100)
+		{
+			ft_sort_100(list, b);
+		}	
 	}
 }
 
