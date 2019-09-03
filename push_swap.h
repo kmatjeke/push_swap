@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 11:11:29 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 15:08:52 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 15:12:58 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ int					min_pos(t_list *list, int min);
 void				ft_six_or_smaller(t_list **list, t_list **b);
 int					ft_median(t_list *list, int num, int loop);
 void				ft_push_swap(t_list **list, t_list **b);
-int					ft_pos(t_ilist *list, int min, int n_min, int p);
+int					ft_pos(t_list *list, int min, int n_min, int p);
 void				p_sort_3(t_list **a, t_list **b);
 void				sort(t_list **stacka, t_list **stackb);
+void				ft_sort_100(t_list **a, t_list **b);
 typedef struct		s_point
 {
 	int				even;

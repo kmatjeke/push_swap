@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 14:08:24 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 14:43:09 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 15:17:40 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int		ft_next_min(t_list *list, int min)
 static void		values(t_list **list, int *min, int *n_min, int *p)
 {
 	*min = min_value(*list);
-	*n_min = ft_next_min(*list, *m);
+	*n_min = ft_next_min(*list, *min);
 	*p = ft_next_min(*list, *n_min);
 }
 
@@ -71,21 +71,22 @@ void			sort(t_list **stacka, t_list **stackb)
 		if ((*stacka)->data == point.min || (*stacka)->data == point.n_min ||
 				(*stacka)->data == point.pos)
 		{
-			ft_pb(a, b);
+			ft_pb(stacka, stackb);
 			if ((*stackb)->data < (*stackb)->next->data)
-				ft_sb(b);
+				ft_sb(stackb);
 			point.even++;
 			if (!check_num(*stacka, point.min, point.n_min, point.pos))
 			{
-				sort_three(stacka, stackb);
+				p_sort_3(stacka, stackb);
+void				delete_all(char **arr, t_list **alst, t_list **b);
 				values(stacka, &point.min, &point.n_min, &point.pos);
 			}
 		}
 		if (ft_pos(*stacka, point.min, point.n_min, point.pos)
 				<= (int)ft_ilstsize(*stacka) / 2)
-			ft_ra(a);
+			ft_ra(stacka);
 		else
-			ft_rra(a);
+			ft_rra(stacka);
 	}
 	finish(stacka, stackb, point.even);
 }

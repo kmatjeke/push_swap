@@ -6,7 +6,7 @@
 #    By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 09:34:34 by kmatjeke          #+#    #+#              #
-#    Updated: 2019/08/20 16:30:06 by kmatjeke         ###   ########.fr        #
+#    Updated: 2019/09/03 15:20:59 by kmatjeke         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRCS =	ft_strdup.c	ft_strlen.c	ft_putchar.c \
 		ft_lstdel.c ft_lstdelone.c ft_array_join.c \
 		ft_lstiter.c ft_lstmap.c ft_lstnew.c \
 		ft_isspace.c ft_words.c get_next_line.c \
-		ft_arraydel.c
+		ft_arraydel.c ft_swap.c
 
 OBJECTS = ft_strdup.o ft_strlen.o ft_putchar.o \
 		  ft_putstr.o ft_strcpy.o ft_strncpy.o \
@@ -56,7 +56,7 @@ OBJECTS = ft_strdup.o ft_strlen.o ft_putchar.o \
 		  ft_lstdel.o ft_lstdelone.o ft_array_join.o \
 		  ft_lstiter.o ft_lstmap.o ft_lstnew.o \
 		  ft_isspace.o ft_words.o get_next_line.o \
-		  ft_arraydel.o
+		  ft_arraydel.o ft_swap.o
 
 all: $(NAME)
 

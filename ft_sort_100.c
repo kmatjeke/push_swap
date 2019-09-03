@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 13:33:12 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 15:09:35 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 15:15:56 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_sort(t_list **list, t_list **b, int loop)
 	{
 		if (check_median(*list, median) == 0)
 		{
-			q--;
+			loop--;
 			median = ft_median(*list, 1, loop);
 			t = ft_median(*list, 1, loop * 2);
 		}

@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 14:43:20 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 14:49:40 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/03 15:19:25 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,17 @@ void	p_sort_3(t_list **a, t_list **b)
 	if (ft_ilstsize(*b) == 2 && (*b)->data < num2)
 		ft_sb(b);
 	else if ((*b)->data > num2 && num2 < num3 && (*b)->data > num2)
-		sort_1(a, b);
-	else if ((*b)->data < y && num2 < num3)
-		sort_2(a, b);
+		p_sort_1(a, b);
+	else if ((*b)->data < num2 && num2 < num3)
+		p_sort_2(a, b);
 	else if ((*b)->data < num2 && num2 > num3 && (*b)->data < num3)
 	{
-		sort_1(a, b);
+		p_sort_1(a, b);
 		ft_sb(b);
 	}
 	else if ((*b)->data > num2 && num2 < num3 && (*b)->data < num3)
 	{
-		sort_1(a, b);
+		p_sort_1(a, b);
 		ft_sb(b);
 	}
 	else if ((*b)->data < num2 && num2 > num3 && (*b)->data > num3)
