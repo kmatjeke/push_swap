@@ -54,4 +54,5 @@ void	ft_sort_100(t_list **a, t_list **b)
 {
 	ft_sort(a, b, 2);
 	sort(a, b);
+	reverse_sort(a, b);
 }
