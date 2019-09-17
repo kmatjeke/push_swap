@@ -6,11 +6,29 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 10:57:57 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/08/21 10:36:53 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 11:14:13 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void		ft_css(t_list **list, t_list **stackb)
+{
+	ft_swapdata(list);
+	ft_swapdata(stackb);
+}
+
+static void		ft_crr(t_list **list, t_list **stackb)
+{
+	ft_rotatedata(list);
+	ft_rotatedata(stackb);
+}
+
+static void		ft_crrr(t_list **list, t_list **stackb)
+{
+	ft_reverse_rotate(list);
+	ft_reverse_rotate(stackb);
+}
 
 static void		ft_execute(t_list **alst, t_list **b, char *str)
 {
@@ -19,7 +37,7 @@ static void		ft_execute(t_list **alst, t_list **b, char *str)
 	else if (ft_strcmp(str, "sb") == 0)
 		ft_swapdata(b);
 	else if (ft_strcmp(str, "ss") == 0)
-		ft_ss(alst, b);
+		ft_css(alst, b);
 	else if (ft_strcmp(str, "pb") == 0)
 		ft_pushdata(alst, b);
 	else if (ft_strcmp(str, "pa") == 0)
@@ -33,9 +51,9 @@ static void		ft_execute(t_list **alst, t_list **b, char *str)
 	else if (ft_strcmp(str, "rrb") == 0)
 		ft_reverse_rotate(b);
 	else if (ft_strcmp(str, "rr") == 0)
-		ft_rr(alst, b);
+		ft_crr(alst, b);
 	else if (ft_strcmp(str, "rrr") == 0)
-		ft_rrr(alst, b);
+		ft_crrr(alst, b);
 }
 
 int				ft_argv_checker(t_list **alst, t_list **b)

@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 11:11:29 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 15:12:58 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 11:23:05 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int					ft_pos(t_list *list, int min, int n_min, int p);
 void				p_sort_3(t_list **a, t_list **b);
 void				sort(t_list **stacka, t_list **stackb);
 void				ft_sort_100(t_list **a, t_list **b);
+void				ft_sort_500(t_list **a, t_list **b);
 void				reverse_sort(t_list **stacka, t_list **stackb);
 typedef struct		s_point
 {

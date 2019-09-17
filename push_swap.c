@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 14:38:15 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 14:56:55 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 12:08:59 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void		ft_push_swap(t_list **list, t_list **b)
 		if (len <= 6)
 			ft_six_or_smaller(list, b);
 		else if (len > 6 && len <= 100)
-		{
 			ft_sort_100(list, b);
-		}	
+		else if (len > 100 && len <= 500)
+			ft_sort_500(list, b);
 	}
 }
 
@@ -38,8 +38,8 @@ static void	finish(t_list **list, t_list **b)
 		return ;
 	}
 	ft_push_swap(list, b);
-	/*ft_ilstdel(list);
-	ft_ilstdel(b);*/
+	ft_ilstdel(list);
+	ft_ilstdel(b);
 }
 
 int			main(int argc, char **argv)
@@ -66,9 +66,9 @@ int			main(int argc, char **argv)
 			ft_arraydel(argv);
 		}
 		finish(&list, &b);
-		ft_printlist(list);
+		/*ft_printlist(list);
 		ft_putchar('\n');
-		ft_printlist(b);
+		ft_printlist(b);*/
 	}
 	return (0);
 }
