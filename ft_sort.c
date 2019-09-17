@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 14:08:24 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 15:17:40 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 13:13:52 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int		check_num(t_list *list, int min, int n_min, int pos)
 
 static int		ft_next_min(t_list *list, int min)
 {
-	t_list *lst;
 	int		new;
+	t_list	*lst;
 
 	lst = list;
 	new = list->data;
@@ -60,33 +60,30 @@ static void		finish(t_list **list, t_list **b, int even)
 	}
 }
 
-void			sort(t_list **stacka, t_list **stackb)
+void			sort(t_list **a, t_list **b)
 {
-	t_point	point;
+	t_point	p;
 
-	values(stacka, &point.min, &point.n_min, &point.pos);
-	point.even = 0;
-	while (ft_ilstsize(*stacka) > 6)
+	values(a, &p.min, &p.n_min, &p.pos);
+	p.even = 0;
+	while (ft_ilstsize(*a) > 6)
 	{
-		if ((*stacka)->data == point.min || (*stacka)->data == point.n_min ||
-				(*stacka)->data == point.pos)
+		if ((*a)->data == p.min || (*a)->data == p.n_min || (*a)->data == p.pos)
 		{
-			ft_pb(stacka, stackb);
-			if ((*stackb)->data < (*stackb)->next->data)
-				ft_sb(stackb);
-			point.even++;
-			if (!check_num(*stacka, point.min, point.n_min, point.pos))
+			ft_pb(a, b);
+			if ((*b)->data < (*b)->next->data)
+				ft_sb(b);
+			p.even++;
+			if (!check_num(*a, p.min, p.n_min, p.pos))
 			{
-				p_sort_3(stacka, stackb);
-void				delete_all(char **arr, t_list **alst, t_list **b);
-				values(stacka, &point.min, &point.n_min, &point.pos);
+				p_sort_3(a, b);
+				values(a, &p.min, &p.n_min, &p.pos);
 			}
 		}
-		if (ft_pos(*stacka, point.min, point.n_min, point.pos)
-				<= (int)ft_ilstsize(*stacka) / 2)
-			ft_ra(stacka);
+		if (ft_pos(*a, p.min, p.n_min, p.pos) <= (int)ft_ilstsize(*a) / 2)
+			ft_ra(a);
 		else
-			ft_rra(stacka);
+			ft_rra(a);
 	}
-	finish(stacka, stackb, point.even);
+	finish(a, b, p.even);
 }

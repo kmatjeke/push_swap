@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 13:15:23 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 13:55:02 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 13:10:57 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int		*ft_stringlist(t_list *list)
 {
 	int		i;
 	int		*string;
-	t_list *temp;
+	t_list	*temp;
 
 	i = 0;
 	temp = list;

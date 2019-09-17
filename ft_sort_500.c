@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 11:24:36 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/17 11:37:08 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 12:56:07 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static void		ft_sortbig(t_list **alst, t_list **b, int loop)
 	}
 }
 
-void	ft_sort_500(t_list **a, t_list **b)
+void			ft_sort_500(t_list **a, t_list **b)
 {
 	ft_sortbig(a, b, 5);
 	while ((*b)->next)

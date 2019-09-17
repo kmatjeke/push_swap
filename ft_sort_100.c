@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 13:33:12 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/03 15:15:56 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 12:57:28 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int		check_median(t_list *list, int m)
 	return (0);
 }
 
-void	ft_sort(t_list **list, t_list **b, int loop)
+void			ft_sort(t_list **list, t_list **b, int loop)
 {
 	int median;
 	int	t;
@@ -49,8 +49,8 @@ void	ft_sort(t_list **list, t_list **b, int loop)
 			ft_pb(list, b);
 	}
 }
-	
-void	ft_sort_100(t_list **a, t_list **b)
+
+void			ft_sort_100(t_list **a, t_list **b)
 {
 	ft_sort(a, b, 2);
 	sort(a, b);

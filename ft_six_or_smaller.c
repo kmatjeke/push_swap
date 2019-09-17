@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 11:08:39 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/09/17 12:01:11 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/09/17 13:04:49 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,33 +25,20 @@ static void	ft_sort_three(t_list **list)
 	n3 = (*list)->next->next->data;
 	if ((n1 > n2) && (n1 > n3) && (n2 > n3))
 	{
-	   ft_swapdata(list);
-	   ft_putendl_fd("sa", 1);
-	   ft_reverse_rotate(list);
-	   ft_putendl_fd("rra", 1);
+		ft_sa(list);
+		ft_rra(list);
 	}
 	else if ((n1 > n2) && (n1 > n3) && (n2 < n3))
-	{
-		ft_rotatedata(list);
-		ft_putendl_fd("ra", 1);
-	}
+		ft_ra(list);
 	else if ((n1 > n2) && (n1 < n3) && (n2 < n3))
-	{
-		ft_swapdata(list);
-		ft_putendl_fd("sa", 1);
-	}
+		ft_sa(list);
 	else if ((n1 < n2) && (n1 < n3) && (n2 > n3))
 	{
-		ft_swapdata(list);
-		ft_putendl_fd("sa", 1);
-		ft_rotatedata(list);
-		ft_putendl_fd("ra", 1);
+		ft_sa(list);
+		ft_ra(list);
 	}
 	else if ((n1 < n2) && (n1 > n3) && (n2 > n3))
-	{
-		ft_reverse_rotate(list);
-		ft_putendl_fd("rra", 1);
-	}
+		ft_rra(list);
 }
 
 static void	ft_sort_four(t_list **list, t_list **b)
@@ -65,21 +52,13 @@ static void	ft_sort_four(t_list **list, t_list **b)
 	pos = min_pos(*list, min);
 	if (pos <= (int)ft_ilstsize(*list) / 2)
 		while ((*list)->data != min)
-		{
-			ft_rotatedata(list);
-			ft_putendl_fd("ra", 1);
-		}
+			ft_ra(list);
 	else
 		while ((*list)->data != min)
-		{
-			ft_reverse_rotate(list);
-			ft_putendl_fd("rra", 1);
-		}
-	ft_pushdata(list, b);
-	ft_putendl_fd("pb", 1);
+			ft_rra(list);
+	ft_pb(list, b);
 	ft_sort_three(list);
-	ft_pushdata(b, list);
-	ft_putendl_fd("pa", 1);
+	ft_pa(list, b);
 }
 
 static void	ft_sort_five(t_list **list, t_list **b)
